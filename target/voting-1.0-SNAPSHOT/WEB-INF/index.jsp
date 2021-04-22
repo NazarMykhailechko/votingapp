@@ -77,30 +77,4 @@
     </form:form>
 </body>
 
-<script>
-    function myFunction() {
-
-        let r = confirm("Підтвердіть ваш вибір!");
-        if (r === true) {
-
-            let xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "https://api.ipify.org/?format=json", true);
-            xhttp.send();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState === 4 && this.status === 200) {
-                    let ip = JSON.parse(this.responseText).ip;
-                    alert(ip);
-                }
-            };
-
-            alert("Дякуємо! Ваш голос зараховано!");
-
-        }
-        else{
-            alert("Будь ласка пройдіть опитування ще раз!");
-        }
-
-    }
-</script>
-
 </html>
