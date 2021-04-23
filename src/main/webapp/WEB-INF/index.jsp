@@ -45,7 +45,9 @@
 <div class="text">
     <img src="https://accordbank.com.ua/static/images/logo.svg">
 </div>
-<h5 class="text">Created by Nazar Mykhailechko</h5>
+<%--<h5 class="text">Created by Nazar Mykhailechko</h5>
+<br>--%>
+<br>
 <br>
 <h1 class="text">Опитування!!!</h1>
 <br>
