@@ -45,7 +45,7 @@
 <h1 class="text">Опитування!!!</h1>
 <br>
 
-    <form:form action="save" method="POST" modelAttribute="voting" >
+    <form:form action="save" method="POST" modelAttribute="voting" onsubmit="alert('Дякуємо! Ваш голос зараховано'); false">
     <h3>Питання1: як ви оцінюєте корпоративну вечірку?</h3>
     <form:select path="question1">
         <form:option value="NONE">Оберіть відповідь</form:option>
