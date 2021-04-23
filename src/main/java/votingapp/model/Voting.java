@@ -14,22 +14,28 @@ public class Voting {
 
     @Column(name = "question1", nullable = false)
     private String question1;
-    @Column(name = "question2", nullable = false)
-    private String question2;
-    @Column(name = "entrydate")
+    @Column(name = "pib")
+    private String pib;
+    @Column(name = "birth")
+    private String birth;
+/*    @Column(name = "entrydate")
     @CreationTimestamp
-    private Date entrydate;
+    private Date entrydate;*/
+
     public Voting() {
     }
 
-    public Voting(String question1, String question2) {
+    public Voting(long id, String question1, String pib, String birth) {
+        this.id = id;
         this.question1 = question1;
-        this.question2 = question2;
+        this.pib = pib;
+        this.birth = birth;
     }
 
     public long getId() {
         return id;
     }
+
 
     public String getQuestion1() {
         return question1;
@@ -39,12 +45,20 @@ public class Voting {
         this.question1 = question1;
     }
 
-    public String getQuestion2() {
-        return question2;
+    public String getPib() {
+        return pib;
     }
 
-    public void setQuestion2(String question2) {
-        this.question2 = question2;
+    public void setPib(String pib) {
+        this.pib = pib;
+    }
+
+    public String getBirth() {
+        return birth;
+    }
+
+    public void setBirth(String birth) {
+        this.birth = birth;
     }
 
     @Override
@@ -52,7 +66,8 @@ public class Voting {
         return "Voting{" +
                 "id=" + id +
                 ", question1='" + question1 + '\'' +
-                ", question2='" + question2 + '\'' +
+                ", pib='" + pib + '\'' +
+                ", birth='" + birth + '\'' +
                 '}';
     }
 }

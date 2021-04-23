@@ -35,6 +35,9 @@
         .text {
             text-align:  center;
         }
+        h1 {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -46,37 +49,39 @@
 <br>
 <h1 class="text">Опитування!!!</h1>
 <br>
-
+<h5 class="text">Шановні колеги, дане опитування проходить серед працівників Акордбанку</h5>
+<h5 class="text">з метою формування списку бажаючих для проведення вакцинації від COVID-19,</h5>
+<h5 class="text">якщо виникне така можливість в поточному році:</h5>
+<br>
     <form:form action="save" method="POST" modelAttribute="voting" onsubmit="alert('Дякуємо! Ваш голос зараховано'); false">
-    <h3>Питання1: як ви оцінюєте корпоративну вечірку?</h3>
-    <form:select path="question1">
+    <h3>Питання 1: Ви готові безкоштовно вакцинуватись акредитованою в Україні вакциною в рамках заявки від Банку?</h3>
+    <form:select id="sel" name="sel" path="question1" onChange="JSGetSelectedItem()">
         <form:option value="NONE">Оберіть відповідь</form:option>
-        <form:option value="1(погано)">1(погано)</form:option>
-        <form:option value="2">2</form:option>
-        <form:option value="3">3</form:option>
-        <form:option value="4">4</form:option>
-        <form:option value="5">5</form:option>
-        <form:option value="6">6</form:option>
-        <form:option value="7">7</form:option>
-        <form:option value="8">8</form:option>
-        <form:option value="9">9</form:option>
-        <form:option value="10(просто феєрично)">10(просто феєрично)</form:option>
+        <form:option value="Так">Так</form:option>
+        <form:option value="Ні">Ні</form:option>
     </form:select>
 
-    <br>
-    <br>
-    <h3>Питання2: чи плануєте ви працювати в Акордбанку протягом наступних 365 днів?</h3>
-        <form:select path="question2">
-            <form:option value="NONE">Оберіть відповідь</form:option>
-            <form:option value="Так">Так</form:option>
-            <form:option value="Ні">Ні</form:option>
-            <form:option value="Завжди розглядаю інші варіанти">Завжди розглядаю інші варіанти</form:option>
-        </form:select>
-    <br>
-    <br>
-    <br>
+     <h4><div id="divId"></div></h4>
+
     <input type="submit" value="Проголосувати">
     </form:form>
+
+
 </body>
 
+
+<script language="javascript">
+    function JSGetSelectedItem() {
+        let dropdownIndex = document.getElementById('sel').selectedIndex;
+        let dropdownValue = document.getElementById('sel')[dropdownIndex].text;
+        /*alert("Hello JSCript " + dropdownValue);*/
+        if (dropdownValue === 'Так'){
+            document.getElementById("divId").innerHTML= dropdownValue + "<h3>Питання 2: Якщо відповідь «Так», то надайти свої дані:</h3><p><label for='firstname'>ПІБ (повна назва): </label><input name='pib'  type='text'/></p><p><label for='date'>Дата народження: </label><input name='birth' type='date' value='2000-01-01'/></p>"
+        }else{
+            document.getElementById("divId").innerHTML=""
+        }
+
+    }
+
+</script>
 </html>
