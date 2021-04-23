@@ -11,5 +11,14 @@
         <property name="characterSetResults" value="utf-8" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="voteing@localhost [2]" uuid="20441c90-809f-4555-8c8d-88e579ba9c5e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/voteing</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="UTC" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>
