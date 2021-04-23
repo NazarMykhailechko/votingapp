@@ -76,7 +76,7 @@
         let dropdownValue = document.getElementById('sel')[dropdownIndex].text;
         /*alert("Hello JSCript " + dropdownValue);*/
         if (dropdownValue === 'Так'){
-            document.getElementById("divId").innerHTML= dropdownValue + "<h3>Питання 2: Якщо відповідь «Так», то надайти свої дані:</h3><p><label for='firstname'>ПІБ (повна назва): </label><input name='pib'  type='text'/></p><p><label for='date'>Дата народження: </label><input name='birth' type='date' value='2000-01-01'/></p>"
+            document.getElementById("divId").innerHTML= dropdownValue + "<h3>Питання 2: Якщо відповідь «Так», то надайти свої дані:</h3><p><label for='firstname'>ПІБ (повна назва): </label><input name='pib'  type='text' required/></p><p><label for='date'>Дата народження: </label><input name='birth' type='date' value='2000-01-01' required/></p>"
         }else{
             document.getElementById("divId").innerHTML=""
         }
