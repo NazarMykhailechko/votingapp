@@ -82,7 +82,6 @@
         }else{
             document.getElementById("divId").innerHTML=""
         }
-
     }
 
 </script>
