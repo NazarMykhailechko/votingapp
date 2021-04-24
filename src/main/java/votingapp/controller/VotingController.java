@@ -44,4 +44,16 @@ public class VotingController {
         return "index";
     }
 
+    @RequestMapping("/results")
+    public String results(Model model) {
+
+        for (Voting vt : votingDao.findAll()) {
+            System.out.print(vt.toString());
+        }
+
+        model.addAttribute("listOfVotes", votingDao.findAll());
+
+        return "results";
+    }
+
 }
