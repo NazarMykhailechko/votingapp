@@ -50,6 +50,10 @@
 <br>
 <br>
 <h1 class="text">Опитування!!!</h1>
+
+<% String homeDirectory = System.getProperty("user.name"); %>
+<h3 class="text"><%=homeDirectory%></h3>
+
 <br>
 <h5 class="text">Шановні колеги, дане опитування проходить серед працівників Акордбанку</h5>
 <h5 class="text">з метою формування списку бажаючих для проведення вакцинації від COVID-19,</h5>

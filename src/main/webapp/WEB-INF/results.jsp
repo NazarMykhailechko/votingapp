@@ -49,6 +49,10 @@
     </style>
 </head>
 <body>
+
+<div id="container" style="position:absolute; top:60px; right:10px; width:500px; height:500px;"></div>
+<script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+
 <c:if test="${!empty listOfVotes}">
     <table class="tg">
         <tr>
@@ -68,4 +72,27 @@
     </table>
 </c:if>
 </body>
+
+<script>
+    function getDataForChart() {
+        let obj = JSON.parse(JSON.stringify(${listOfVotes})) ;
+
+        let values = [];
+        for(let k in obj){
+                values.push(obj[k]['question1']);
+        }
+
+        let result = values.reduce((a, c) => (a[c] = (a[c] || 0) + 1, a), Object.create(null));
+
+        return Object.entries(result);
+    }
+
+    anychart.onDocumentLoad(function() {
+        // create chart and set data
+        // as Array of Arrays
+        var chart = anychart.pie(getDataForChart());
+        chart.title("Результати голосування");
+        chart.container("container").draw();
+    });
+</script>
 </html>

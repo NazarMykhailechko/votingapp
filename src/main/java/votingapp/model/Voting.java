@@ -63,11 +63,11 @@ public class Voting {
 
     @Override
     public String toString() {
-        return "Voting{" +
-                "id=" + id +
-                ", question1='" + question1 + '\'' +
-                ", pib='" + pib + '\'' +
-                ", birth='" + birth + '\'' +
+        return '{' +
+                "\"id\":" + id +
+                ", \"question1\":\"" + question1 + '\"' +
+                ", \"pib\":\"" + pib + '\"' +
+                ", \"birth\":\"" + birth + '\"' +
                 '}';
     }
 }
