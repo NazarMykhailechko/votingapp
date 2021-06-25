@@ -52,7 +52,6 @@ public class VotingController {
         }
 
         model.addAttribute("listOfVotes", votingDao.findAll());
-
         return "results";
     }
 
