@@ -12,6 +12,8 @@ public class Voting {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "division", nullable = false)
+    private String division;
     @Column(name = "question1", nullable = false)
     private String question1;
     @Column(name = "question2", nullable = false)
@@ -31,8 +33,9 @@ public class Voting {
     public Voting() {
     }
 
-    public Voting(long id, String question1, String question2, String question3, String question4) {
+    public Voting(long id, String division, String question1, String question2, String question3, String question4) {
         this.id = id;
+        this.division = division;
         this.question1 = question1;
         this.question2 = question2;
         this.question3 = question3;
@@ -41,6 +44,14 @@ public class Voting {
 
     public long getId() {
         return id;
+    }
+
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
     }
 
     public String getQuestion1() {
@@ -79,6 +90,7 @@ public class Voting {
     public String toString() {
         return "Voting{" +
                 "id=" + id +
+                ", division='" + division + '\'' +
                 ", question1='" + question1 + '\'' +
                 ", question2='" + question2 + '\'' +
                 ", question3='" + question3 + '\'' +
