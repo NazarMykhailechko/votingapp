@@ -159,6 +159,7 @@
 
         <form:select id="sel" name="sel" path="division" class="js-select">
             <form:option value=""></form:option>
+            <form:option value="1">базове управління продажів (311)</form:option>
             <form:option value="1">1</form:option>
             <form:option value="2">2</form:option>
             <form:option value="3">3</form:option>
