@@ -55,4 +55,10 @@ public class VotingController {
         return "results";
     }
 
+    @RequestMapping("/data")
+    public String data(Model model) {
+
+        return "data";
+    }
+
 }

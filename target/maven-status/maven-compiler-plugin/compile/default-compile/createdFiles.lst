@@ -1,0 +1,4 @@
+votingapp\dao\VotingDao.class
+votingapp\SpringBootWebRun.class
+votingapp\controller\VotingController.class
+votingapp\model\Voting.class
