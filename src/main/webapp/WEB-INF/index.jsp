@@ -173,13 +173,13 @@
     <form:form action="save" method="POST" modelAttribute="voting" id="myform">
 
         <h5>ПІБ:</h5>
-        <form:input path="pib" style="width:20%" placeholder="example"/>
+        <form:input id="sel1" path="pib" style="width:20%" placeholder="example"/>
 
         <h5>Номер відділення або підрозділ ГБ:</h5>
-        <form:input path="division" style="width:30%" placeholder="example"/>
+        <form:input id="sel2" path="division" style="width:30%" placeholder="example"/>
 
         <h5>Короткий опис проблеми/неефективного процесу і шляхи оптимізації:</h5>
-        <form:textarea path="txt" style="width:80%" rows="10" placeholder="example"/>
+        <form:textarea id="sel3" path="txt" style="width:80%" rows="10" placeholder="example"/>
 
         <%--     <h4><div id="divId"></div></h4>--%>
         <br>
@@ -223,7 +223,7 @@ if (dropdownValue === 'Оберіть відповідь'){
 
         if ( $('#sel').val() !== '' && $('#sel1').val() !== '' && $('#sel2').val().length !== 0 && $('#sel3').val() !== '' && $('#sel4').val() !== ''){  m=true; }
         else{
-        alert("Ви не дали відповідь на всі запитання!");
+        alert("Ви не заповнили всі поля!");
         return false
     }
         alert("Дякуємо! Ваш голос зараховано!");
